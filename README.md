@@ -7,7 +7,6 @@
 > 花了 2ms的時間跑完，若選擇直接`return num1 + num2`則不用多新增一個變數`awnser` ，可謂當頭棒喝啊！
 
 3.TwoSum
-
 ![](https://i.imgur.com/voZJBuz.png)
 >第一次寫，我的思路是遍歷兩次每個元素並相加驗證是否符合`target`，但用錯了遞迴方法
 

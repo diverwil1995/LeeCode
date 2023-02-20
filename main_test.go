@@ -41,7 +41,7 @@ func TestTwoSum(t *testing.T) {
 	anwser := TwoSum(nums, target)
 	expect := []int{4, 5}
 	if reflect.DeepEqual(anwser, expect) {
-		t.Errorf("Expected anwser %v,but got%v", expect, anwser)
+		t.Errorf("Expected anwser %v,but got %v", expect, anwser)
 	}
 
 	nums = []int{3, 2, 4}
@@ -49,6 +49,28 @@ func TestTwoSum(t *testing.T) {
 	anwser = TwoSum(nums, target)
 	expect = []int{1, 2}
 	if reflect.DeepEqual(anwser, expect) {
-		t.Errorf("Expected anwser %v,but got%v", expect, anwser)
+		t.Errorf("Expected anwser %v,but got %v", expect, anwser)
+	}
+}
+
+func TestSearchInsert(t *testing.T) {
+	nums := []int{1, 3, 5, 6}
+	target := 5
+	anwser := SearchInsert(nums, target)
+	if anwser != 2 {
+		t.Errorf("Expeced anwser %v, but got %v", 2, anwser)
+	}
+
+	target = 7
+	anwser = SearchInsert(nums, target)
+	if anwser != 4 {
+		t.Errorf("Expeced anwser %v, but got %v", 4, anwser)
+	}
+
+	nums = []int{1, 3}
+	target = 1
+	anwser = SearchInsert(nums, target)
+	if anwser != 0 {
+		t.Errorf("Expeced anwser %v, but got %v", 0, anwser)
 	}
 }

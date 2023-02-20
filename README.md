@@ -8,7 +8,7 @@
 
 ## 3.TwoSum
 ![](https://i.imgur.com/voZJBuz.png)
->第一次寫，我的思路是遍歷兩次每個元素並相加驗證是否符合`target`，但用錯了遞迴方法。
+>第一次寫，我的思路是遍歷兩次每個元素並相加驗證是否符合`target`，但條件設定不完善。
 
 ![](https://i.imgur.com/9VwyY8Y.png)
 >變成同個數字會重複相加。

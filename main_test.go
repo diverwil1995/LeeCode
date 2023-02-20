@@ -1,6 +1,7 @@
 package main
 
 import (
+	"reflect"
 	"sort"
 	"testing"
 )
@@ -32,4 +33,22 @@ func TestSumTwoInt(t *testing.T) {
 		t.Errorf("Expected sum %v, but got %v", 10, sum)
 	}
 
+}
+
+func TestTwoSum(t *testing.T) {
+	nums := []int{2, 4, 6, 8, 10, 12}
+	target := 22
+	anwser := TwoSum(nums, target)
+	expect := []int{4, 5}
+	if reflect.DeepEqual(anwser, expect) {
+		t.Errorf("Expected anwser %v,but got%v", expect, anwser)
+	}
+
+	nums = []int{3, 2, 4}
+	target = 6
+	anwser = TwoSum(nums, target)
+	expect = []int{1, 2}
+	if reflect.DeepEqual(anwser, expect) {
+		t.Errorf("Expected anwser %v,but got%v", expect, anwser)
+	}
 }

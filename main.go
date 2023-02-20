@@ -28,5 +28,17 @@ func SumTwoInt(num1 int, num2 int) int {
 }
 */
 
+func TwoSum(nums []int, target int) []int {
+	anwser := []int{}
+	for i := 0; i < len(nums)-1; i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i]+nums[j] == target {
+				anwser = append(anwser, i, j)
+			}
+		}
+	}
+	return anwser
+}
+
 func main() {
 }

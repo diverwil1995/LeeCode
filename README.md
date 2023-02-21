@@ -30,6 +30,14 @@
 > 後來發現其實將原本的slice二分法搜尋出target後，在他的左側就是insert的索引了，
 > 若找不到target，就會變成回傳最右側+1的索引！
 
+## 5.[IsValid](https://leetcode.com/problems/valid-parentheses/description/)
+> 第一眼想不到任何解法，看solutions才知道大概方向，首先剔除奇數字串，先這樣，之後複習在釐清一遍。
+
+
+
+---
+
+
 ## 順便練習寫測試
 ## 1.BinarySearch
 
@@ -40,6 +48,8 @@
 >先是不知道如何比較兩個slice，畢竟slice是reference，後來使用relect.DeepEqual()比較竟出現這樣的問題（ＸＤ
 
 ## 4.TestSearchInsert
+
+## 5.TestIsValid
 
 
 

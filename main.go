@@ -56,5 +56,28 @@ func SearchInsert(nums []int, target int) int {
 	return left
 }
 
+// TODO: 還不夠清楚，要複習！
+func IsValid(s string) bool {
+	if len(s)%2 != 0 {
+		return false
+	}
+	pairs := map[rune]rune{
+		'(': ')',
+		'[': ']',
+		'{': '}',
+	}
+	left := []rune{}
+	for _, v := range s {
+		if _, ok := pairs[v]; ok {
+			left = append(left, v)
+		} else if len(left) == 0 || pairs[left[len(left)-1]] != v {
+			return false
+		} else {
+			left = left[:len(left)-1]
+		}
+	}
+	return len(left) == 0
+}
+
 func main() {
 }

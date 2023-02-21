@@ -74,3 +74,15 @@ func TestSearchInsert(t *testing.T) {
 		t.Errorf("Expeced anwser %v, but got %v", 0, anwser)
 	}
 }
+
+func TestIsValid(t *testing.T) {
+	s := "()[]{}"
+	if anwser := IsValid(s); !anwser {
+		t.Errorf("Expeced anwser true, but got %v", anwser)
+	}
+
+	s = ")("
+	if anwser := IsValid(s); anwser {
+		t.Errorf("Expeced anwser false, but got %v", anwser)
+	}
+}
